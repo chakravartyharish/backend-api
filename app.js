@@ -22,7 +22,7 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
   pingTimeout: 30000,
   cors: {
-    origin: "https://harishsocialmediaapp.netlify.app", // Allow CORS for Socket.IO as well
+    origin: "*", // Allow CORS for Socket.IO as well
     methods: ["GET", "POST"],
   },
 });
