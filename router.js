@@ -5,7 +5,7 @@ const followController = require("./controllers/followController")
 const cors = require("cors")
 
 const corsOptions = {
-  origin: "https://harishsocialmediaapp.netlify.app", // your frontend's URL
+  origin: "*", // your frontend's URL
   optionsSuccessStatus: 200, // For legacy browser support
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
