@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://harishsocialmediaapp.netlify.app", // Specify your frontend's URL
+  origin: "*", // Specify your frontend's URL
   optionsSuccessStatus: 200, // For legacy browser support
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
