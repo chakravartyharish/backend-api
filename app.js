@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 
 // CORS configuration
 const corsOptions = {
-  origin: "*", // Specify your frontend's URL
+  origin: ["http://localhost:3000", "https://harishsocialmediaapp.netlify.app"],
   optionsSuccessStatus: 200, // For legacy browser support
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
@@ -25,7 +25,7 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
   pingTimeout: 30000,
   cors: {
-    origin: "*", // Allow CORS for Socket.IO as well
+    origin: ["http://localhost:3000", "https://harishsocialmediaapp.netlify.app"],
     methods: ["GET", "POST"],
   },
 });
