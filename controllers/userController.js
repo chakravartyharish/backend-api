@@ -13,7 +13,7 @@ exports.apiGetPostsByUsername = async function (req, res) {
     //res.header("Cache-Control", "max-age=10").json(posts)
     res.json(posts)
   } catch (e) {
-    res.status(500).send("Sorry, invalid user requested.")
+    res.status(500).send("Sorry, the requested user does not exist.")
   }
 }
 
