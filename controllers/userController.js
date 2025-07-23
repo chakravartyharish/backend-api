@@ -56,7 +56,7 @@ exports.sharedProfileData = async function (req, res, next) {
     const viewer = jwt.verify(req.body.token, process.env.JWTSECRET)
     viewerId = viewer._id
   } catch (e) {
-    viewerId = 0
+    viewerId = null
   }
   req.isFollowing = await Follow.isVisitorFollowing(req.profileUser._id, viewerId)
 

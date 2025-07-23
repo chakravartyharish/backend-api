@@ -62,6 +62,9 @@ Follow.prototype.delete = function() {
 }
 
 Follow.isVisitorFollowing = async function(followedId, visitorId) {
+  if (!ObjectID.isValid(visitorId)) {
+    return false
+  }
   let followDoc = await followsCollection.findOne({followedId: followedId, authorId: new ObjectID(visitorId)})
   if (followDoc) {
     return true
