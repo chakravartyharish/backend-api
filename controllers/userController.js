@@ -53,7 +53,7 @@ exports.doesEmailExist = async function (req, res) {
 exports.sharedProfileData = async function (req, res, next) {
   let viewerId
   try {
-    viewer = jwt.verify(req.body.token, process.env.JWTSECRET)
+    const viewer = jwt.verify(req.body.token, process.env.JWTSECRET)
     viewerId = viewer._id
   } catch (e) {
     viewerId = 0
